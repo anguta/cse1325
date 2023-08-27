@@ -1,8 +1,6 @@
-import java.util.Scanner;
-
 public class Hello {
     public static void main(String[] args) {
-	    // scanner ?
+	    // scanner ? not needed
 	    
 	    String user_name = System.getProperty("user.name");
 	    
