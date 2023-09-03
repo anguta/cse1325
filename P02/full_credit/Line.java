@@ -19,7 +19,7 @@ public class Line {
 	@Override
 	// toString
 	public String toString() {
-	    return color.toString() + " (" + x1 + "," + y1 + ")" + "-" + "(" + x2 + "," + y2 + ") has length " + length();
+	    return color.toString() + " (" + x1 + "," + y1 + ")" + "-" + "(" + x2 + "," + y2 + ") "; //has length " + length();
 	}
 	
 	public double length() {
