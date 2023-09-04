@@ -3,4 +3,4 @@ public enum Color {
 	CYAN,
 	PINK,
 	ORANGE,
-}
+} 
