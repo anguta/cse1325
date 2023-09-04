@@ -14,7 +14,7 @@ public class Line {
 		this.y2 = y2;
 		this.color = color;
 		
-	} 
+	}
 	
 	@Override
 	// toString
