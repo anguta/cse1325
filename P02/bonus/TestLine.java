@@ -12,5 +12,5 @@ public class TestLine{
         System.out.println(line3.toString() + " has length " + line3.length());
         System.out.println(line4.toString() + " has length " + line4.length());
         
-	}
+	} 
 }

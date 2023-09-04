@@ -14,6 +14,6 @@ public enum Color {
 	// toString
 	public String toString() {
 	    return this.name() + " (" + String.format("0x%06X",rgb) + ") ";
-	} 
+	}  
 
 }
