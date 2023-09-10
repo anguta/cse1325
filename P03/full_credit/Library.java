@@ -22,7 +22,7 @@ public class Library {
             publication.checkOut(patron);
             
             return " ";
-         } catch (IndexOutOfBoundsException e) {
+         } catch(IndexOutOfBoundsException e) {
             return "\u001B[31m" + "Exception Caught: Your index/book is out of bounds!!!" + "\u001B[0m";
         }
     }
