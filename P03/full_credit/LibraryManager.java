@@ -23,13 +23,13 @@ public class LibraryManager {
         	
             String valid = library.checkOut(book, patron);
             System.out.println(valid);
-   
-    	} catch(NumberFormatException e) {
-    	    System.out.println("Enter a valid INTEGER"); // checks to see if its an integer, "nope" would not work
+            
+        } catch(NumberFormatException e) {
+            System.out.println("Enter a valid INTEGER"); // checks to see if its an integer, "nope" would not work
     	}
     	
     	// prints new library
-    	System.out.println(library);
+        System.out.println(library);
         
     }
 
