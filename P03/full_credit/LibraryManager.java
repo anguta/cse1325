@@ -22,7 +22,7 @@ public class LibraryManager {
             String patron = scanner.nextLine();
         	
             String valid = library.checkOut(book, patron);
-            System.out.println(); // prints new line
+            System.out.println(valid);
             
         } catch(NumberFormatException e) {
             System.out.println("\u001B[31m" + "Enter a valid INTEGER" + "\u001B[0m"); // checks to see if its an integer, "nope" would not work
