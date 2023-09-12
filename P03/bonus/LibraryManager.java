@@ -33,7 +33,7 @@ public class LibraryManager {
             System.out.println(valid);
    
     	} catch(NumberFormatException e) {
-            System.out.println("Enter a valid INTEGER"); // checks to see if its an integer, "nope" would not work
+            System.out.println("\u001B[31m" + "Enter a valid INTEGER" + "\u001B[0m"); // checks to see if its an integer, "nope" would not work
     	}
     	
     	// prints new library
