@@ -7,8 +7,7 @@ public class Patron {
     public Patron(String name, String email) {
     
         this.name = name;
-        this.email = email;
-        
+        this.email = email;  
     }
 
     @Override
