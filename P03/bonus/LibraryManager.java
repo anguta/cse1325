@@ -19,10 +19,10 @@ public class LibraryManager {
     	
         try {
     	    
-    	    System.out.print("Which book would you like?: "); 
-            int book = Integer.parseInt(scanner.nextLine().trim()); // trim allowed EX: "2 " to work alongside EX: "2"
-        	
-            System.out.println("Patrons");
+    	    System.out.print("Which book would you like?: ");
+    	    int book = Integer.parseInt(scanner.nextLine().trim()); // trim allowed EX: "2 " to work alongside EX: "2"
+    	    
+    	    System.out.println("Patrons");
             System.out.println(library.patronMenu());
             
             System.out.print("What is your name? : ");
