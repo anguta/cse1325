@@ -28,7 +28,7 @@ public class Publication {
     } */
     
     public void checkOut(Patron patron) {
-        // this needs to change
+        // this needs to change for bonus
         this.loanedTo = patron;
         this.dueDate = LocalDate.now().plusDays(14);
     }
