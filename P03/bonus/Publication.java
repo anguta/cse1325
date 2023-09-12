@@ -19,8 +19,7 @@ public class Publication {
         
         this.copyright = copyright;
         
-        this.loanedTo = null;
-        this.dueDate = null;
+        // removed this.loanedTo and this.dueDate because I found out they get automatically set to null
     }
     
     /* public void checkIn() {
