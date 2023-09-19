@@ -30,9 +30,9 @@ public class Video extends Publication{
         this.runtime = Duration.ofMinutes(runtime);
     }
     /**
-    * Returns the string value of the video, including its title, author, copyright year and runtime
+    * Returns Video and runtime to toStringBuilder
     *
-    * @return A string value of the video
+    * @return A string value of the video and runtime
     * @since 1.0
     */
     @Override
