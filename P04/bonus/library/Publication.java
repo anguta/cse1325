@@ -17,7 +17,7 @@ public class Publication {
     private Patron loanedTo;
     private LocalDate dueDate; //.plusDays(14); ?
     /**
-    * Constructs a new Video with the title, author, copyright year and the Video's runtime
+    * Constructs a new Publication with the title, author, copyright year
     * @param title The title of the publication
     * @param author The author of the publication
     * @param copyright The copyright year of the publication
