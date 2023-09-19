@@ -66,7 +66,7 @@ public class Publication {
         String result = pre + ") " + title +  " by " + author + ", " + "\u001B[4m" + "\u001B[3m" + "Copyright: " + copyright + "\u001B[0m";
         
         if(!mid.isEmpty()) {
-            result = result + ", " + mid;
+            result += ", " + mid;
         }
         
         if(loanedTo != null) {
