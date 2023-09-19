@@ -25,7 +25,7 @@ public class Video extends Publication{
     public Video(String title, String author, int copyright, int runtime) {
         super(title, author, copyright);
         if (runtime <= 0) {
-            throw new InvalidRuntimeException("Invalid Runtime");
+            throw new InvalidRuntimeException("Runtime", runtime);
         }
         this.runtime = Duration.ofMinutes(runtime);
     }
