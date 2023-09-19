@@ -3,7 +3,7 @@ package library;
 import java.util.ArrayList;
 
 /**
- * A library containing a collection of different publications
+ * A library containing a collection of different publications and patrons
  * 
  * @author Angel Cabrera
  * @version 1.0
