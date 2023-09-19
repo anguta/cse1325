@@ -55,9 +55,9 @@ public class Publication {
         this.dueDate = LocalDate.now().plusDays(14);
     }
     
-     /**Returns string value of the publication (book or video) including the title, author, copyright year, runtime, the patron and the due date
-    *@param pre The word Book or Video 
-    *@param mid More information, like runtime, if the patron checks out a Video
+    /**Returns string value of the publication (book or video) including the title, author, copyright year, runtime, the patron and the due date
+    * @param pre The word Book or Video 
+    * @param mid More information, like runtime, if the patron checks out a Video
     * @return String value of the publication
     * @since 1.0
     *
