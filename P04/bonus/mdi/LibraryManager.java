@@ -22,9 +22,9 @@ public class LibraryManager {
             library.addPatron(new Patron("Jerry", "JerryXGamer24@gmail.com"));
             
             // video ?
-            library.addPublication(new Video("Chainsaw Man", "MAPPA & Tatsuki Fujimoto", 2022, 288));
-            library.addPublication(new Video("Jujutsu Kaisen 0", "MAPPA & Gege Akutami", 2021, 105));
-            library.addPublication(new Video("Dragon Ball Super", "Akira Toriyama", 2015, 2620));
+            library.addPublication(new Video("\"Chainsaw Man\"", "MAPPA & Tatsuki Fujimoto", 2022, 288));
+            library.addPublication(new Video("\"Jujutsu Kaisen 0\"", "MAPPA & Gege Akutami", 2021, 105));
+            library.addPublication(new Video("\"Dragon Ball Super\"", "Akira Toriyama", 2015, 2620));
         
             System.out.println(library);
             Scanner scanner = new Scanner(System.in);
