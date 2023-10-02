@@ -70,13 +70,13 @@ public class Library {
     * @since 1.0
     */
 	public String checkIn(int publicationIndex) {
-		try {
+        try {
 			
-			Publication publication = publications.get(publicationIndex);
+            Publication publication = publications.get(publicationIndex);
 			
-			publication.checkIn();
+            publication.checkIn();
 			
-			return " ";
+            return " ";
         } catch(IndexOutOfBoundsException e) {
             return "\u001B[31m" + "Exception Caught: Your index is out of bounds!!!" + "\u001B[0m";
         }
