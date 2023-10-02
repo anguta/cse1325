@@ -50,7 +50,7 @@ public class Publication {
     
         if(this.loanedTo == null) throw new IllegalArgumentException("Publication is not checked out.");
 		
-		this.loanedTo = null;
+        this.loanedTo = null;
         this.dueDate = null;
     }
     /**
