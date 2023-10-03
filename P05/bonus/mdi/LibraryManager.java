@@ -63,7 +63,7 @@ public class LibraryManager {
                     } catch(NumberFormatException e) {
                         System.out.println("\u001B[31m" + "Enter a valid INTEGER: " + "\u001B[0m" + e); // checks to see if its an integer, "nope" would not work
                     } catch(Exception e) {
-                          System.err.println(e);
+                        System.err.println(e);
                     }
             
             }
