@@ -76,7 +76,7 @@ public class Library {
 			
             publication.checkIn();
 			
-            return " ";
+            return "Thank you for returning the publication";
         } catch(IndexOutOfBoundsException e) {
             return "\u001B[31m" + "Exception Caught: Your index is out of bounds!!!" + "\u001B[0m";
         }
