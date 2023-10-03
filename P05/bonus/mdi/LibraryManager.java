@@ -31,25 +31,25 @@ public class LibraryManager {
                             libraryManager.printLibrary();
                             break;
                        case 1:
-						    libraryManager.addPublications();
-						    break;
+                            libraryManager.addPublications();
+                            break;
                        case 2:
                             libraryManager.addVideo();
                             break;
                        case 3:
-						    libraryManager.addPatrons();
-						    break;
+                            libraryManager.addPatrons();
+                            break;
                        case 4:
-						    libraryManager.listPatrons();
-						    break;
+                            libraryManager.listPatrons();
+                            break;
                        case 5:
-						    libraryManager.checkOut();
-						    break;
+                            libraryManager.checkOut();
+                            break;
                        case 6:
                             libraryManager.checkIn();
                             break;
                        case 7: 
-						    System.out.println("Thanks for visiting East Library and Rec Center, come again!");
+                            System.out.println("Thanks for visiting East Library and Rec Center, come again!");
                             System.exit(0);
                         default:
                             throw new IllegalArgumentException("Enter valid choice!!!");          
@@ -57,16 +57,16 @@ public class LibraryManager {
                     
                     } catch(NumberFormatException e) {
                         System.out.println("\u001B[31m" + "Enter a valid INTEGER: " + "\u001B[0m" + e); // checks to see if its an integer, "nope" would not work
-                	} catch(Exception e) {
-                	    System.err.println(e);
-                	}
+                    } catch(Exception e) {
+                          System.err.println(e);
+                    }
             
             }
     }
     
     public void loadMenu() {
         System.out.print("\n\n\n\t\t\t\t" + "MENU\n");
-		System.out.println("0. List Publications");
+        System.out.println("0. List Publications");
         System.out.println("1. Add new publication");
         System.out.println("2. Add new video");
         System.out.println("3. Add new patron");
@@ -82,78 +82,78 @@ public class LibraryManager {
     
     public void addPublications() {
         System.out.print("Enter the title of the publication: ");
-		String title = scanner.nextLine();
+        String title = scanner.nextLine();
 						
         System.out.print("Who is the author of the publication? ");
-		String author = scanner.nextLine();
+        String author = scanner.nextLine();
 						
-		System.out.print("Enter the copyright year of the publication: ");
-	    int copyright = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter the copyright year of the publication: ");
+        int copyright = Integer.parseInt(scanner.nextLine().trim());
 						
-		library.addPublication(new Publication(title, author, copyright));
+        library.addPublication(new Publication(title, author, copyright));
     }
     
     public void addVideo() {
         System.out.print("Enter the title of the video: ");
-		String title = scanner.nextLine();
+        String title = scanner.nextLine();
 						
-		System.out.print("Who is the author of the video?: ");
-		String author = scanner.nextLine();
+        System.out.print("Who is the author of the video?: ");
+        String author = scanner.nextLine();
 						
-		System.out.print("Enter the copyright year of the video: ");
-		int copyright = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter the copyright year of the video: ");
+        int copyright = Integer.parseInt(scanner.nextLine().trim());
 						
-		System.out.print("Enter the runtime of the video (in minutes): ");
-		int runtime = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("Enter the runtime of the video (in minutes): ");
+        int runtime = Integer.parseInt(scanner.nextLine().trim());
 						
         library.addPublication(new Video(title, author, copyright, runtime));    
     }
     
     public void addPatrons() {
         System.out.print("Enter new patron's name: " );
-		String name = scanner.nextLine();
+        String name = scanner.nextLine();
 						
-		System.out.print("Enter new patron's email: ");
-		String email = scanner.nextLine();
+        System.out.print("Enter new patron's email: ");
+        String email = scanner.nextLine();
 						
-		library.addPatron(new Patron(name, email));
+        library.addPatron(new Patron(name, email));
 						
-		System.out.println("Added new patron " + name);
+        System.out.println("Added new patron " + name);
     }
     
     public void checkOut() {
         System.out.println(library);
+		
+        System.out.print("Which book would you like?: ");
+        int publication = Integer.parseInt(scanner.nextLine().trim());
 						
-	    System.out.print("Which book would you like?: ");
-		int publication = Integer.parseInt(scanner.nextLine().trim());
+        System.out.println("Patrons ");
+        System.out.println(library.patronMenu());
 						
-		System.out.println("Patrons ");
-		System.out.println(library.patronMenu());
+        System.out.print("What is your name?: ");
+        int patron = Integer.parseInt(scanner.nextLine().trim());
 						
-		System.out.print("What is your name?: ");
-		int patron = Integer.parseInt(scanner.nextLine().trim());
+        String valid = library.checkOut(publication, patron);
+        System.out.println(valid);
 						
-		String valid = library.checkOut(publication, patron);
-		System.out.println(valid);
-						
-		System.out.println(library);
+        System.out.println(library);
     }
     
     public void checkIn() {
         System.out.println(library);
 						
-		System.out.print("What would you like to return?: ");
-		int publication = Integer.parseInt(scanner.nextLine().trim());
+        System.out.print("What would you like to return?: ");
+        int publication = Integer.parseInt(scanner.nextLine().trim());
 						
-		String valid = library.checkIn(publication);
-		System.out.println(valid);
+        String valid = library.checkIn(publication);
+        System.out.println(valid);
 						
-		System.out.println(library);
+        System.out.println(library);
     }
     
     public void listPatrons() {
         System.out.print("\nPatrons");
-		System.out.println(library.patronMenu());
+        System.out.println(library.patronMenu());
     }
     
     public void presetPublications() {
