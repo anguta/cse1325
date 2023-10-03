@@ -163,16 +163,16 @@ public class LibraryManager {
     }
     
     public void presetPublications() {
-            library.addPublication(new Publication("Diary of a Wimpy Kid", "Jeff Kinney", 2007));
-            library.addPublication(new Publication("The Giver", "Lois Lowry", 1993));
-            library.addPublication(new Publication("Blue Lock", "Muneyuki Kaneshiro", 2018));
+        library.addPublication(new Publication("Diary of a Wimpy Kid", "Jeff Kinney", 2007));
+        library.addPublication(new Publication("The Giver", "Lois Lowry", 1993));
+        library.addPublication(new Publication("Blue Lock", "Muneyuki Kaneshiro", 2018));
            
-            library.addPublication(new Video("Chainsaw Man", "MAPPA & Tatsuki Fujimoto", 2022, 288));
-            library.addPublication(new Video("Jujutsu Kaisen 0", "MAPPA & Gege Akutami", 2021, 105));
-            library.addPublication(new Video("Dragon Ball Super", "Akira Toriyama", 2015, 2620));
+        library.addPublication(new Video("Chainsaw Man", "MAPPA & Tatsuki Fujimoto", 2022, 288));
+        library.addPublication(new Video("Jujutsu Kaisen 0", "MAPPA & Gege Akutami", 2021, 105));
+        library.addPublication(new Video("Dragon Ball Super", "Akira Toriyama", 2015, 2620));
             
-            library.addPatron(new Patron("Angel Cabrera", "axc7208@mavs.uta.edu"));
-            library.addPatron(new Patron("Wang", "DonWang@gmail.com"));
-            library.addPatron(new Patron("Jerry", "JerryXGamer24@gmail.com"));
+        library.addPatron(new Patron("Angel Cabrera", "axc7208@mavs.uta.edu"));
+        library.addPatron(new Patron("Wang", "DonWang@gmail.com"));
+        library.addPatron(new Patron("Jerry", "JerryXGamer24@gmail.com"));
     }
 }
