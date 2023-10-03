@@ -9,12 +9,18 @@ import library.InvalidRuntimeException;
 
 public class LibraryManager {
 
-    Library library = new Library("\nEast Library and Rec Center");
+    Library library;
+    
+    public LibraryManager(Library library) {
+        this.library = library;
+    }
+    
+    
     Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
-    
-        LibraryManager libraryManager = new LibraryManager();
+        Library library = new Library("\nEast Library and Rec Center");
+        LibraryManager libraryManager = new LibraryManager(library);
 			
             libraryManager.presetPublications();
 			
