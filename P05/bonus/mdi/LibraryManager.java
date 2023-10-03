@@ -30,7 +30,7 @@ public class LibraryManager {
                     
                     System.out.print("Enter choice (7 to exit): ");
 
-                    int userChoice = Integer.parseInt(libraryManager. scanner.nextLine().trim());
+                    int userChoice = Integer.parseInt(libraryManager.scanner.nextLine().trim());
                     
                     switch (userChoice) {
                         case 0:
