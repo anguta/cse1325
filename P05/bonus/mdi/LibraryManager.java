@@ -16,7 +16,7 @@ public class LibraryManager {
     
         LibraryManager libraryManager = new LibraryManager();
 			
-			libraryManager.presetPublications();
+            libraryManager.presetPublications();
 			
             while(true) {
                 try {
@@ -30,25 +30,25 @@ public class LibraryManager {
                         case 0:
                             libraryManager.printLibrary();
                             break;
-                        case 1:
+                       case 1:
 						    libraryManager.addPublications();
 						    break;
-						case 2:
+                       case 2:
                             libraryManager.addVideo();
                             break;
-                        case 3:
+                       case 3:
 						    libraryManager.addPatrons();
 						    break;
-						case 4:
+                       case 4:
 						    libraryManager.listPatrons();
 						    break;
-						case 5:
+                       case 5:
 						    libraryManager.checkOut();
 						    break;
-						case 6:
-						    libraryManager.checkIn();
-						    break;
-						case 7: 
+                       case 6:
+                            libraryManager.checkIn();
+                            break;
+                       case 7: 
 						    System.out.println("Thanks for visiting East Library and Rec Center, come again!");
                             System.exit(0);
                         default:
