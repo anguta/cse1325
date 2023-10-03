@@ -15,7 +15,6 @@ public class LibraryManager {
         this.library = library;
     }
     
-    
     Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
