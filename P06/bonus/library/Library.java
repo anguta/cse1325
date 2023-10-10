@@ -42,7 +42,7 @@ public class Library {
         int publicationSize = Integer.parseInt(br.readLine());
         for(int i = 0; i < publicationSize; i++) {
             
-            if(br.readLine().trim().equals("publication") {
+            if(br.readLine().trim().equals("publication")) {
                 
                 publications.add(new Publication(br));
             } else {
