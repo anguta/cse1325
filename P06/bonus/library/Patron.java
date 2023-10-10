@@ -36,8 +36,8 @@ public class Patron {
     */
     public Patron(BufferedReader br) throws IOException {
         
-        this.name = br.readLine();
-        this.email = br.readLine();
+        this.name = br.readLine().trim();
+        this.email = br.readLine().trim();
     }
     /**
     * Writes name and email to the stream
