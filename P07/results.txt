@@ -1,0 +1,283 @@
+FULL CREDIT
+===========
+
+QUESTION 1: Why is String[] args changed to a LinkedList in WordSearch.main? (Hint: Examine the WordSearch constructor!) I think because it is more flexible, and dynamic, it is intanced to a LinkedList, from Arrays.asList.
+
+
+
+
+QUESTION 2: How many puzzles did your machine need to solve with 1 thread to run for between 30 and 45 seconds: 1500 puzzles
+
+
+
+
+QUESTION 3: Provide the output of 
+
+    time java WordSearch n 1000 ../puzzle??.txt 
+
+where n is 1 to 16 and 1000 is the number of puzzles specified in Question 2. NOTE: You can run all of these with a single bash command if you like (again, replace 1000 with your number of puzzles from Question 2):
+
+for i in {1..16} ; do time java WordSearch $i 1000 ../puzzle??.txt ; done
+
+Example Timing:
+
+ for i in {1..16} ; do time java WordSearch $i 1000 ../puzzle??.txt ; done
+1000 puzzles
+Thread 0: 0-999
+
+real	0m31.872s
+user	0m32.475s
+sys	0m0.224s
+
+1000 puzzles
+Thread 1: 500-999
+Thread 0: 0-499
+
+real	0m14.376s
+user	0m29.078s
+sys	0m0.229s
+
+...and so on
+
+
+
+YOUR Timing:
+
+1500 puzzles with 1 threads
+Thread 0: 0-1499
+       36.39 real        36.61 user         0.20 sys
+
+1500 puzzles with 2 threads
+Thread 0: 0-749
+Thread 1: 750-1499
+       11.76 real        23.63 user         0.20 sys
+
+1500 puzzles with 3 threads
+Thread 1: 500-999
+Thread 0: 0-499
+Thread 2: 1000-1499
+        8.15 real        24.21 user         0.20 sys
+
+1500 puzzles with 4 threads
+Thread 3: 1125-1499
+Thread 1: 375-749
+Thread 0: 0-374
+Thread 2: 750-1124
+        6.44 real        25.40 user         0.23 sys
+
+1500 puzzles with 5 threads
+Thread 0: 0-299
+Thread 2: 600-899
+Thread 4: 1200-1499
+Thread 3: 900-1199
+Thread 1: 300-599
+        9.76 real        47.68 user         0.29 sys
+
+1500 puzzles with 6 threads
+Thread 1: 250-499
+Thread 3: 750-999
+Thread 4: 1000-1249
+Thread 0: 0-249
+Thread 5: 1250-1499
+Thread 2: 500-749
+        8.68 real        50.48 user         0.34 sys
+
+1500 puzzles with 7 threads
+Thread 1: 215-429
+Thread 3: 644-857
+Thread 6: 1286-1499
+Thread 5: 1072-1285
+Thread 2: 430-643
+Thread 0: 0-214
+Thread 4: 858-1071
+        5.74 real        37.69 user         0.37 sys
+
+1500 puzzles with 8 threads
+Thread 2: 376-563
+Thread 6: 1126-1312
+Thread 5: 939-1125
+Thread 3: 564-751
+Thread 7: 1313-1499
+Thread 4: 752-938
+Thread 1: 188-375
+Thread 0: 0-187
+        7.63 real        56.01 user         0.50 sys
+
+1500 puzzles with 9 threads
+Thread 3: 501-667
+Thread 4: 668-834
+Thread 2: 334-500
+Thread 7: 1168-1333
+Thread 6: 1002-1167
+Thread 8: 1334-1499
+Thread 0: 0-166
+Thread 1: 167-333
+Thread 5: 835-1001
+        5.47 real        40.42 user         0.44 sys
+
+1500 puzzles with 10 threads
+Thread 3: 450-599
+Thread 7: 1050-1199
+Thread 0: 0-149
+Thread 6: 900-1049
+Thread 4: 600-749
+Thread 5: 750-899
+Thread 2: 300-449
+Thread 1: 150-299
+Thread 9: 1350-1499
+Thread 8: 1200-1349
+        5.51 real        41.15 user         0.43 sys
+
+1500 puzzles with 11 threads
+Thread 3: 411-547
+Thread 7: 956-1091
+Thread 1: 137-273
+Thread 9: 1228-1363
+Thread 0: 0-136
+Thread 4: 548-683
+Thread 2: 274-410
+Thread 8: 1092-1227
+Thread 6: 820-955
+Thread 10: 1364-1499
+Thread 5: 684-819
+        7.40 real        55.98 user         0.52 sys
+
+1500 puzzles with 12 threads
+Thread 6: 750-874
+Thread 11: 1375-1499
+Thread 5: 625-749
+Thread 7: 875-999
+Thread 9: 1125-1249
+Thread 0: 0-124
+Thread 10: 1250-1374
+Thread 2: 250-374
+Thread 4: 500-624
+Thread 8: 1000-1124
+Thread 1: 125-249
+Thread 3: 375-499
+        5.57 real        41.95 user         0.42 sys
+
+1500 puzzles with 13 threads
+Thread 4: 464-579
+Thread 10: 1155-1269
+Thread 5: 580-694
+Thread 9: 1040-1154
+Thread 6: 695-809
+Thread 0: 0-115
+Thread 11: 1270-1384
+Thread 2: 232-347
+Thread 12: 1385-1499
+Thread 7: 810-924
+Thread 3: 348-463
+Thread 8: 925-1039
+Thread 1: 116-231
+        8.68 real        65.34 user         0.58 sys
+
+1500 puzzles with 14 threads
+Thread 3: 323-429
+Thread 7: 751-857
+Thread 1: 108-215
+Thread 4: 430-536
+Thread 2: 216-322
+Thread 5: 537-643
+Thread 13: 1393-1499
+Thread 12: 1286-1392
+Thread 0: 0-107
+Thread 9: 965-1071
+Thread 8: 858-964
+Thread 11: 1179-1285
+Thread 10: 1072-1178
+Thread 6: 644-750
+        5.72 real        42.11 user         0.56 sys
+
+1500 puzzles with 15 threads
+Thread 11: 1100-1199
+Thread 0: 0-99
+Thread 5: 500-599
+Thread 14: 1400-1499
+Thread 10: 1000-1099
+Thread 12: 1200-1299
+Thread 3: 300-399
+Thread 4: 400-499
+Thread 13: 1300-1399
+Thread 8: 800-899
+Thread 6: 600-699
+Thread 2: 200-299
+Thread 7: 700-799
+Thread 1: 100-199
+Thread 9: 900-999
+        7.76 real        58.48 user         0.68 sys
+
+1500 puzzles with 16 threads
+Thread 4: 376-469
+Thread 8: 752-845
+Thread 13: 1221-1313
+Thread 9: 846-939
+Thread 3: 282-375
+Thread 6: 564-657
+Thread 5: 470-563
+Thread 11: 1034-1127
+Thread 0: 0-93
+Thread 2: 188-281
+Thread 10: 940-1033
+Thread 15: 1407-1499
+Thread 1: 94-187
+Thread 7: 658-751
+Thread 14: 1314-1406
+Thread 12: 1128-1220
+        8.74 real        65.60 user         0.66 sys
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program even slightly?  Why or why not? 
+It speeds up until it reaches about 4 threads then it stays pretty consistent, ~1.5s difference. It does slow it down a little bit, I think it's because there are many threads trying to work at the same time.
+
+
+
+
+QUESTION 4: Does adding more threads increase the "system load" (sys), or is it constant regardless of the number of threads?  Why? It does increase system load. I think it's because, like I said in the last question, they are trying to work at the same time, and there is limited hardware that can finish it, causing the load to slightly go up each time a new thread is used.
+
+
+
+
+
+
+BONUS
+=====
+
+QUESTION 5: Time your thread pool version of WordSearch exactly as you did for the full credit version. Post your timings here.
+
+YOUR Timing:
+
+
+
+
+
+
+
+QUESTION 6: Is a thread pool faster, slower, or roughly equivalent in performance? 
+
+
+
+
+
+
+
+QUESTION 7: Compare your full credit and bonus solution code. Which do you believe is more supportable over a long lifetime of evolving hardware and environments?
+
+
+
+
+
+
+
+EXTREME BONUS
+=============
+
+QUESTION 8: Post your final timings here. (The "race" on Antares will determine the actual winner - this just lets me know you're competing!)
+
+
+
+
+
+
+
