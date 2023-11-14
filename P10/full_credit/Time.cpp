@@ -34,8 +34,6 @@ std::istream& operator>>(std::istream& ist, Time& time) {
         ist.setstate(std::ios::failbit);
     }
     
-    time = Time(time._hour, time._minute, time._second);
-    time.rationalize();
     return ist;
 }
 
