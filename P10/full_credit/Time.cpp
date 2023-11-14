@@ -16,10 +16,10 @@ Time& Time::operator++() {
 }
 
 Time Time::operator++(int) {
-    Time temp{*this};
+    Time result{*this};
     ++(*this);
     
-    return temp; 
+    return result; 
 }
 
 std::ostream& operator<<(std::ostream& ost, const Time& time) {
