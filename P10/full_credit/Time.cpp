@@ -6,7 +6,7 @@ Time::Time(int hour, int minute, int second)
 Time Time::operator+(Time time) {
     Time test(_hour + time._hour, _minute + time._minute, _second + time._second);
     rationalize();
-    return *this;
+    return test;
 }
 
 Time& Time::operator++() {
@@ -33,7 +33,6 @@ std::istream& operator>>(std::istream& ist, Time& time) {
     if(!ist) {
         ist.setstate(std::ios::failbit);
     }
-    
     time.rationalize();
     return ist;
 }
