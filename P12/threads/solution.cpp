@@ -83,7 +83,7 @@ int main() {
     vector<thread> threads;
     
     for(int i = 0; i < 10; i++) {
-        threads.push_back(thread(worker));
+        threads.push_back(thread{worker});
     }
 
 
