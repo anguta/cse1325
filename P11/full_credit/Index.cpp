@@ -9,13 +9,13 @@ void Index::add_word(Word word, std::string filename, int line) {
 
 std::ostream& operator<<(std::ostream& ost, const Index& index) {
     for(auto& [ word, locations ] : index._index) {
-		ost << word << ": ";
+        ost << word << ": ";
 		
-		for(auto& location : locations) {
-		    ost << location << ", ";
-		}
+        for(auto& location : locations) {
+            ost << location << ", ";
+        }
 	    
-		ost << '\n';
+        ost << '\n';
 	}
 	
 	return ost;
