@@ -69,7 +69,7 @@ void worker() {
 
 int main() {
   // Create the work to be done by the threads
-  for (double theta = 0.0; theta < 10.0; theta += 0.1)
+  for (double theta = 0.0; theta < 360.0; theta += 0.1)
     work.push_back(Work{theta});
 
   // 4g. Initialize the “next_work” iterator to point to
