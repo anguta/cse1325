@@ -10,7 +10,7 @@ void Index::add_word(Word word, std::string filename, int line) {
 std::ostream& operator<<(std::ostream& ost, const Index& index) {
     for(auto& [ word, locations ] : index._index) {
         ost << word << ": ";
-		Location::next_word();
+        Location::next_word();
 
         for(auto& location : locations) {
             ost << location << ", ";
